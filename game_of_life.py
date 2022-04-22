@@ -3,7 +3,7 @@ from time import sleep
 from os import system
 from copy import deepcopy
 
-# The Cosmos is infinite but computers isn't infinite
+# The Cosmos is infinite but computers aren't infinite
 COSMOS_HEIGHT = 30
 COSMOS_WIDTH = 30
 
