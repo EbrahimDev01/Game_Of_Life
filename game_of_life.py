@@ -1,6 +1,6 @@
 from random import randint
 from time import sleep
-from os import system
+from os import system, name
 from copy import deepcopy
 
 # The Cosmos is infinite but computers aren't infinite
@@ -13,9 +13,12 @@ CELL_DEAD = ' '
 SURVIVAL_PROBABILITIES_PERCENT = 15
 ALTERNATION_TIME_PERSECOND = .25
 
+# Console clear function
+clear = lambda :system('cls') if name == "nt" else system('clear')
+
 
 def cosmos_draw(cosmos):
-    system('cls')
+    clear()
     print('_' * (COSMOS_WIDTH+2))
     for y in cosmos:
         cosmos_row = '|'
@@ -64,3 +67,4 @@ def big_bang():
     cosmos_draw(cosmos)
    
 big_bang()
+
